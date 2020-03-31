@@ -109,8 +109,9 @@ set sidescrolloff=5
 set display+=lastline
 
 " CtrlP rebinding to be invoked by pressing CTRL-P
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_map = '<C-p>'
+"let g:ctrlp_cmd = 'CtrlP'
+nnoremap <leader>p :CtrlP<CR>
 
 " Shortcut for NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -118,8 +119,8 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if only window open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Remap leader to ,
-let mapleader = ","
+" Remap leader to space
+let mapleader = "\<Space>"
 
 " Movement by screen line instead of file line for j and k
 nnoremap j gj
