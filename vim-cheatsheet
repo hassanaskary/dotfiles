@@ -1,0 +1,9 @@
+leader = <space>
+
+leader+w+v - split window vertically
+leader+w+s - split window horizontally
+leader+w+[h,j,k,l] - move to window in direction
+
+leader+p - invoke CtrlP (maybe replace CtrlP with fzf)
+
+CTRL+n - toggle NERDTree (move between it with leader+w keys)
