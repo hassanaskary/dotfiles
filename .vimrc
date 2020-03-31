@@ -19,6 +19,8 @@ Plug 'sheerun/vim-polyglot'
 " Theme
 Plug 'franbach/miramare'
 
+Plug 'preservim/nerdtree'
+
 call plug#end()
 
 " Disable vi compatibility mode and enable useful vim functionality
@@ -98,3 +100,9 @@ set display+=lastline
 " CtrlP rebinding to be invoked by pressing CTRL-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Shortcut for NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if only window open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
