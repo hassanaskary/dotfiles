@@ -98,20 +98,23 @@ set undofile
 " Highlight cursor position
 set cursorline
 
+" Always show at least three lines above/below the cursor.
+set scrolloff=3
+set sidescrolloff=5
+set display+=lastline
+
 " Remap leader to space
 let mapleader = "\<Space>"
+
+" Remap spliting a window to <space>w
+nnoremap <leader>w <C-w>
 
 " Clear highlighting of hlsearch by Ctrl-L
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-" Always show at least three lines above/below the cursor.
-set scrolloff=3
-set sidescrolloff=5
-set display+=lastline
-
-" Rebinding CtrlP to <space>p
+" CtrlP remap to <space>p
 nnoremap <leader>p :CtrlP<CR>
 
 " Shortcut for NERDTree
