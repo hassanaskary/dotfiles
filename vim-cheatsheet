@@ -7,3 +7,7 @@ leader+w+[h,j,k,l] - move to window in direction
 leader+p - invoke CtrlP (maybe replace CtrlP with fzf)
 
 CTRL+n - toggle NERDTree (move between it with leader+w keys)
+
+leader+t - create new tab
+leader+m - move to right tab
+leader+n - move to left tab
