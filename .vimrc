@@ -98,9 +98,6 @@ set undofile
 " Highlight cursor position
 set cursorline
 
-" Remap leader to space
-let mapleader = "\<Space>"
-
 " Clear highlighting of hlsearch by Ctrl-L
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
@@ -111,7 +108,9 @@ set scrolloff=3
 set sidescrolloff=5
 set display+=lastline
 
-" Rebinding CtrlP to <space>p
+" CtrlP rebinding to be invoked by pressing CTRL-P
+"let g:ctrlp_map = '<C-p>'
+"let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>p :CtrlP<CR>
 
 " Shortcut for NERDTree
@@ -119,6 +118,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Close vim if only window open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Remap leader to space
+let mapleader = "\<Space>"
 
 " Movement by screen line instead of file line for j and k
 nnoremap j gj
