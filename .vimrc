@@ -109,6 +109,12 @@ let mapleader = "\<Space>"
 " Remap spliting a window to <space>w
 nnoremap <leader>w <C-w>
 
+" Remap opening tabs and moving between them to <space>t and <space>n,
+" <space>m respectively
+nnoremap <leader>t :tabe<CR>
+nnoremap <leader>m :tabn<CR>
+nnoremap <leader>n :tabp<CR>
+
 " Clear highlighting of hlsearch by Ctrl-L
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
