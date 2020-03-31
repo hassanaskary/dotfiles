@@ -26,6 +26,9 @@ call plug#end()
 " Disable vi compatibility mode and enable useful vim functionality
 set nocompatible
 
+" Encoding utf-8
+set encoding=utf-8
+
 " Enable true colors
 set termguicolors
 
@@ -65,6 +68,9 @@ set backspace=indent,eol,start
 " Enable auto indententation
 set autoindent
 
+" Show current command in status
+set showcmd
+
 " Enable case insensitive search
 set ignorecase
 
@@ -83,22 +89,27 @@ set wildmenu
 " Highlight matched search results
 set hls
 
+" Show colorcolumn
+set colorcolumn=80
+
+" Keep an undo file
+set undofile
+
+" Highlight cursor position
+set cursorline
+
 " Clear highlighting of hlsearch by Ctrl-L
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-" Always show at least one line above/below the cursor.
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
+" Always show at least three lines above/below the cursor.
+set scrolloff=3
+set sidescrolloff=5
 set display+=lastline
 
 " CtrlP rebinding to be invoked by pressing CTRL-P
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Shortcut for NERDTree
@@ -106,3 +117,15 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Close vim if only window open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Remap leader to ,
+let mapleader = ","
+
+" Movement by screen line instead of file line for j and k
+nnoremap j gj
+nnoremap k gk
+
+" Remap help key to esc to avoid hitting it accidently
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
