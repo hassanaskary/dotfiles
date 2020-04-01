@@ -17,7 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 
 " Theme
-Plug 'franbach/miramare'
+Plug 'morhetz/gruvbox'
 
 Plug 'preservim/nerdtree'
 
@@ -33,16 +33,17 @@ set encoding=utf-8
 set termguicolors
 
 " Enable italic for keywords in colorscheme
-let g:miramare_enable_italic = 1
-
+let g:gruvbox_italic=1
+    
 " Colorscheme
-colorscheme miramare
+colorscheme gruvbox
+set background=dark
 
 " Populate airline_symbols dictionary with powerline symbols
 let g:airline_powerline_fonts = 1
 
 " Airline theme
-let g:airline_theme = 'miramare'
+let g:airline_theme = 'gruvbox'
 
 " Turn on syntax highlighting
 syntax on
