@@ -93,9 +93,6 @@ set hls
 " Show colorcolumn
 set colorcolumn=80
 
-" Keep an undo file
-set undofile
-
 " Highlight cursor position
 set cursorline
 
