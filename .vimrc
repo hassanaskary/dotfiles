@@ -13,7 +13,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
@@ -92,8 +93,8 @@ if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-" CtrlP remap to <space>p
-nnoremap <leader>p :CtrlP<CR>
+" find files with fzf
+nmap <leader>p :Files<CR>
 
 " shortcut for NERDTree
 map <C-n> :NERDTreeToggle<CR>
