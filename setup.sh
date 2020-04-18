@@ -4,53 +4,23 @@ echo "========================================================="
 echo "updating"
 echo "========================================================="
 sudo apt update
-sudo apt upgrade
+sudo apt -y upgrade
 
 echo "========================================================="
 echo "installing build-essential etc..."
 echo "========================================================="
-sudo apt install build-essential apt-transport-https curl
+sudo apt -y install build-essential apt-transport-https curl
 
 echo "========================================================="
 echo "installing alacritty"
 echo "========================================================="
-sudo add-apt-repository ppa:mmstick76/alacritty
-sudo apt install alacritty 
+sudo add-apt-repository -y ppa:mmstick76/alacritty
+sudo apt -y install alacritty 
 
 echo "========================================================="
-echo "installing tmux"
+echo "installing vim etc..."
 echo "========================================================="
-sudo apt install tmux
-
-echo "========================================================="
-echo "installing vim"
-echo "========================================================="
-
-sudo apt install vim
-echo "========================================================="
-echo "installing keepassxc"
-echo "========================================================="
-sudo apt install keepassxc
-
-echo "========================================================="
-echo "installing mpv"
-echo "========================================================="
-sudo apt install mpv
-
-echo "========================================================="
-echo "installing transmission"
-echo "========================================================="
-sudo apt install transmission
-
-echo "========================================================="
-echo "installing libreoffice"
-echo "========================================================="
-sudo apt install libreoffice
-
-echo "========================================================="
-echo "installing virtualbox"
-echo "========================================================="
-sudo apt install virtualbox
+sudo apt -y install vim tmux sxiv mpv htop tlp tlp-rdw keepassxc transmission libreoffice virtualbox
 
 echo "========================================================="
 echo "installing miniconda3"

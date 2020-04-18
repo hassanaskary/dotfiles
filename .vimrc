@@ -1,6 +1,11 @@
 " Hassan Askary's vimrc
+" hassanaskary.com
 
-" If vim plug is not installed then install it
+" ##########################################################
+" plugins start
+" ----------------------------------------------------------
+
+" if vim plug is not installed then install it
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -8,112 +13,81 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'sheerun/vim-polyglot'
-
-" Theme
 Plug 'morhetz/gruvbox'
-
 Plug 'preservim/nerdtree'
-
 call plug#end()
 
-" Disable vi compatibility mode and enable useful vim functionality
-set nocompatible
+" ----------------------------------------------------------
+" plugins end
+" ##########################################################
 
-" Encoding utf-8
-set encoding=utf-8
+set nocompatible " disable vi compatibility mode and enable useful vim functionality
+set encoding=utf-8 " encoding utf-8
+set termguicolors " enable true colors
 
-" Enable true colors
-set termguicolors
+" ##########################################################
+" themes start
+" ----------------------------------------------------------
 
-" Enable italic for keywords in colorscheme
-let g:gruvbox_italic=1
-    
-" Colorscheme
+let g:gruvbox_italic=1 " enable italics for keywords in gruvbox
 colorscheme gruvbox
 set background=dark
 
-" Populate airline_symbols dictionary with powerline symbols
-let g:airline_powerline_fonts = 1
-
-" Airline theme
+let g:airline_powerline_fonts = 1 " populate airline_symbols dictionary with powerline symbols
 let g:airline_theme = 'gruvbox'
 
-" Turn on syntax highlighting
+" ----------------------------------------------------------
+" themes end
+" ##########################################################
+
 syntax on
+set number " show line numbers
+set relativenumber " enable relative line numbering
 
-" Show line numbers
-set number
-
-" Enable relative line numbering
-set relativenumber
-
-" Use 4 spaces instead of tabs
+" use 4 spaces instead of tabs
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Always show status line at the bottom
-set laststatus=2
+set laststatus=2 " always show status line at the bottom
+set backspace=indent,eol,start " disable unintuitive backspace behavior
+set autoindent " enable auto indententation
+set showcmd " show current command in status
+set ignorecase " enable case insensitive search
+set smartcase " if search has any capital letter then search becomes case sensitive
+set incsearch " start searching as you type
+set ruler " show cursor position all the time
+set wildmenu " display completion message in a status line
+set hls " highlight matched search results
+set colorcolumn=80 " show colorcolumn
+set cursorline " highlight cursor position
 
-" Disable unintuitive backspace behavior
-set backspace=indent,eol,start
-
-" Enable auto indententation
-set autoindent
-
-" Show current command in status
-set showcmd
-
-" Enable case insensitive search
-set ignorecase
-
-" If search has any capital letter then search becomes case sensitive
-set smartcase
-
-" Start searching as you type
-set incsearch
-
-" Show cursor position all the time
-set ruler
-
-" Display completion message in a status line
-set wildmenu
-
-" Highlight matched search results
-set hls
-
-" Show colorcolumn
-set colorcolumn=80
-
-" Highlight cursor position
-set cursorline
-
-" Always show at least three lines above/below the cursor.
+" always show at least three lines above/below the cursor.
 set scrolloff=3
 set sidescrolloff=5
 set display+=lastline
 
-" Remap leader to space
+" ##########################################################
+" keybindings start
+" ----------------------------------------------------------
+
+" remap leader to space
 let mapleader = "\<Space>"
 
-" Remap spliting a window to <space>w
+" remap spliting a window to <space>w
 nnoremap <leader>w <C-w>
 
-" Remap opening tabs and moving between them to <space>t and <space>n,
-" <space>m respectively
+" remap opening tabs and moving between them to <space>t and <space>n, <space>m respectively
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>m :tabn<CR>
 nnoremap <leader>n :tabp<CR>
 
-" Clear highlighting of hlsearch by Ctrl-L
+" clear highlighting of hlsearch by Ctrl-L
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
@@ -121,17 +95,21 @@ endif
 " CtrlP remap to <space>p
 nnoremap <leader>p :CtrlP<CR>
 
-" Shortcut for NERDTree
+" shortcut for NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-" Close vim if only window open is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Movement by screen line instead of file line for j and k
+" movement by screen line instead of file line for j and k
 nnoremap j gj
 nnoremap k gk
 
-" Remap help key to esc to avoid hitting it accidently
+" remap help key to esc to avoid hitting it accidently
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+" ----------------------------------------------------------
+" keybindings end
+" ##########################################################
+
+" close vim if only window open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
