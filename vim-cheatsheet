@@ -11,3 +11,12 @@ CTRL+n - toggle NERDTree (move between it with leader+w keys)
 leader+t - create new tab
 leader+m - move to right tab
 leader+n - move to left tab
+
+CTRL+d - invoke multicursor on the word under cursor, add new cursor on the matched word
+         then use commands such as c, s, I, A or press v to use normal mode commands
+
+leader+A - search the codebase for the word under cursor
+leader+a - enter string to be searched in codebase
+leader+c - focus the CtrlSF window
+leader+C - toggle open/close the CtrlSF window
+p - preview file in CtrlSF window
