@@ -6,13 +6,11 @@ leader+w+[h,j,k,l] - move to window in direction
 
 leader+p - invoke fzf
 
-CTRL+n - toggle NERDTree (move between it with leader+w keys)
-
 leader+t - create new tab
 leader+m - move to right tab
 leader+n - move to left tab
 
-CTRL+d - invoke multicursor on the word under cursor, add new cursor on the matched word
+CTRL+n - invoke multicursor on the word under cursor, add new cursor on the matched word
          then use commands such as c, s, I, A or press v to use normal mode commands
 
 leader+A - search the codebase for the word under cursor
