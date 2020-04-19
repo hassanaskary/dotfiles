@@ -21,7 +21,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
 call plug#end()
 
 " ----------------------------------------------------------
@@ -98,9 +97,6 @@ endif
 " find files with fzf
 nmap <leader>p :Files<CR>
 
-" shortcut for NERDTree
-map <C-n> :NERDTreeToggle<CR>
-
 " movement by screen line instead of file line for j and k
 nnoremap j gj
 nnoremap k gk
@@ -114,11 +110,11 @@ vnoremap <F1> <ESC>
 let g:multi_cursor_use_default_mapping=0
 
 " Default mapping
-let g:multi_cursor_start_word_key      = '<C-d>'
+let g:multi_cursor_start_word_key      = '<C-n>'
 let g:multi_cursor_select_all_word_key = '<A-m>'
 let g:multi_cursor_start_key           = 'g<C-d>'
 let g:multi_cursor_select_all_key      = 'g<A-m>'
-let g:multi_cursor_next_key            = '<C-d>'
+let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
@@ -132,9 +128,6 @@ nmap <leader>C :CtrlSFToggle<CR>
 " ----------------------------------------------------------
 " keybindings end
 " ##########################################################
-
-" close vim if only window open is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:ctrlsf_auto_preview = 1
 let g:ctrlsf_auto_focus = {
