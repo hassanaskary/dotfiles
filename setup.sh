@@ -36,6 +36,7 @@ cp -r .fonts/ ~/
 cp .alacritty.yml ~/
 cp .tmux.conf ~/
 cp .vimrc ~/
+cp .gitconfig ~/
 
 echo "========================================================="
 echo "done"
