@@ -20,7 +20,7 @@ sudo apt -y install alacritty
 echo "========================================================="
 echo "installing vim etc..."
 echo "========================================================="
-sudo apt -y install vim tmux silversearcher-ag sxiv mpv htop tlp tlp-rdw keepassxc transmission libreoffice virtualbox
+sudo apt -y install neovim tmux silversearcher-ag sxiv mpv htop tlp tlp-rdw keepassxc transmission libreoffice virtualbox
 
 echo "========================================================="
 echo "installing miniconda3"
@@ -35,8 +35,9 @@ echo "========================================================="
 cp -r .fonts/ ~/
 cp .alacritty.yml ~/
 cp .tmux.conf ~/
-cp .vimrc ~/
 cp .gitconfig ~/
+mkdir -p ~/.config/nvim/
+cp init.vim ~/.config/nvim/
 
 echo "========================================================="
 echo "done"
