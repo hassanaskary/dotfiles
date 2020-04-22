@@ -56,6 +56,7 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
+Plug 'tmhedberg/SimpylFold'
 call plug#end()
 
 " colorscheme

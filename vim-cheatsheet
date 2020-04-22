@@ -13,3 +13,6 @@ p - preview file in CtrlSF window
 
 leader+cc - comment lines (use visual mode to comment multiple lines)
 leader+cu - uncomment lines (use visual mode to uncomment multiple lines)
+
+zc - close fold
+zo - open fold
