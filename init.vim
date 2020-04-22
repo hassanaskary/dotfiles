@@ -32,6 +32,7 @@ set cursorline " highlight cursor position
 set mouse=a " enable mouse usage
 set clipboard=unnamedplus " copy and paste to system clipboard
 set splitbelow splitright " always split right and below
+set noshowmode
 
 let g:python3_host_prog='/home/hassan/.conda/envs/pynvim/bin/python'
 
@@ -57,6 +58,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'tmhedberg/SimpylFold'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " colorscheme
@@ -95,3 +97,8 @@ let g:ctrlsf_auto_focus = {
 let g:neoformat_basic_format_align = 1 " Enable alignment
 let g:neoformat_basic_format_retab = 1 " Enable tab to spaces conversion
 let g:neoformat_basic_format_trim = 1 " Enable trimmming of trailing whitespace
+
+" lightline plugin settings
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ }
