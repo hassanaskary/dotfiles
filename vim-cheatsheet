@@ -1,20 +1,12 @@
 leader = <space>
 
-leader+w+v - split window vertically
-leader+w+s - split window horizontally
-leader+w+[h,j,k,l] - move to window in direction
+CTRL+w+v - split window vertically
+CTRL+w+s - split window horizontally
+CTRL+[h,j,k,l] - move to window in direction
 
 leader+p - invoke fzf
 
-leader+t - create new tab
-leader+m - move to right tab
-leader+n - move to left tab
-
-CTRL+n - invoke multicursor on the word under cursor, add new cursor on the matched word
-         then use commands such as c, s, I, A or press v to use normal mode commands
-
 leader+A - search the codebase for the word under cursor
 leader+a - enter string to be searched in codebase
-leader+c - focus the CtrlSF window
-leader+C - toggle open/close the CtrlSF window
+leader+c - toggle open/close the CtrlSF window
 p - preview file in CtrlSF window
