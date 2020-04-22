@@ -1,5 +1,15 @@
-" Hassan Askary's vimrc
-" hassanaskary.com
+" ###########################
+" #                         #
+" # Hassan Askary           #
+" #                         #
+" # hassanaskary.com        #
+" # github.com/hassanaskary #
+" #                         #
+" ###########################
+
+set nocompatible " disable vi compatibility mode and enable useful vim functionality
+set encoding=utf-8 " encoding utf-8
+set termguicolors " enable true colors
 
 " ##########################################################
 " plugins start
@@ -27,10 +37,6 @@ call plug#end()
 " plugins end
 " ##########################################################
 
-set nocompatible " disable vi compatibility mode and enable useful vim functionality
-set encoding=utf-8 " encoding utf-8
-set termguicolors " enable true colors
-
 " ##########################################################
 " themes start
 " ----------------------------------------------------------
@@ -45,6 +51,10 @@ let g:airline_theme = 'gruvbox'
 " ----------------------------------------------------------
 " themes end
 " ##########################################################
+
+" ##########################################################
+" general start
+" ----------------------------------------------------------
 
 syntax on
 set number " show line numbers
@@ -73,6 +83,10 @@ set cursorline " highlight cursor position
 set scrolloff=3
 set sidescrolloff=5
 set display+=lastline
+
+" ----------------------------------------------------------
+" general end
+" ##########################################################
 
 " ##########################################################
 " keybindings start
@@ -129,6 +143,7 @@ nmap <leader>C :CtrlSFToggle<CR>
 " keybindings end
 " ##########################################################
 
+" CTRLSF plugin settings
 let g:ctrlsf_auto_preview = 1
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
