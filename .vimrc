@@ -143,7 +143,7 @@ nmap <leader>C :CtrlSFToggle<CR>
 " keybindings end
 " ##########################################################
 
-" CTRLSF plugin settings
+" CtrlSF plugin settings
 let g:ctrlsf_auto_preview = 1
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
