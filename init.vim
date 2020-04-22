@@ -53,6 +53,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " colorscheme
