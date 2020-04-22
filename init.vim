@@ -55,6 +55,7 @@ Plug 'morhetz/gruvbox'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
+Plug 'sbdchd/neoformat'
 call plug#end()
 
 " colorscheme
@@ -84,7 +85,12 @@ nmap <leader>A <Plug>CtrlSFCwordPath <CR>
 nmap <leader>c :CtrlSFToggle<CR>
 
 " CtrlSF plugin settings
-let g:ctrlsf_auto_preview = 1
+let g:ctrlsf_auto_preview = 1 
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
     \ }
+
+" Neoformat plugin settings
+let g:neoformat_basic_format_align = 1 " Enable alignment
+let g:neoformat_basic_format_retab = 1 " Enable tab to spaces conversion
+let g:neoformat_basic_format_trim = 1 " Enable trimmming of trailing whitespace
