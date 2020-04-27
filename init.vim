@@ -59,6 +59,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'tmhedberg/SimpylFold'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " colorscheme
