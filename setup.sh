@@ -9,7 +9,7 @@ sudo apt -y upgrade
 echo "========================================================="
 echo "installing build-essential etc..."
 echo "========================================================="
-sudo apt -y install build-essential apt-transport-https curl
+sudo apt -y install build-essential apt-transport-https curl cmake
 
 echo "========================================================="
 echo "installing alacritty"
