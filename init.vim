@@ -34,7 +34,7 @@ set clipboard=unnamedplus " copy and paste to system clipboard
 set splitbelow splitright " always split right and below
 set noshowmode
 
-let g:python3_host_prog='/home/hassan/.conda/envs/pynvim/bin/python'
+let g:python3_host_prog='/home/hassan/misc/miniconda3/envs/pynvim/bin/python'
 
 " always show at least three lines above/below the cursor.
 set scrolloff=3
@@ -53,10 +53,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'morhetz/gruvbox'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-Plug 'sbdchd/neoformat'
 Plug 'tmhedberg/SimpylFold'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
