@@ -33,6 +33,8 @@ set mouse=a " enable mouse usage
 set clipboard=unnamedplus " copy and paste to system clipboard
 set splitbelow splitright " always split right and below
 set noshowmode
+set spelllang=en_gb " enable spell check
+autocmd FileType latex,tex,md,markdown setlocal spell " enable spell checking in following file types
 
 let g:python3_host_prog='/home/hassan/misc/miniconda3/envs/pynvim/bin/python'
 
@@ -58,6 +60,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tmhedberg/SimpylFold'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'lervag/vimtex'
 call plug#end()
 
 " colorscheme
@@ -101,3 +104,8 @@ let g:neoformat_basic_format_trim = 1 " Enable trimmming of trailing whitespace
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ }
+
+" vimtex plugin settings
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+
