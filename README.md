@@ -7,3 +7,5 @@
 **Editor:** Neovim
 
 **Font:** JetBrains Mono
+
+**Color Scheme:** Gruvbox
