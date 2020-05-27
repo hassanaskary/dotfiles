@@ -2,8 +2,8 @@
 
 # dotfiles
 
-*Terminal:* Alacritty
+**Terminal:** Alacritty
 
-*Editor:* Neovim
+**Editor:** Neovim
 
-*Font:* JetBrains Mono
+**Font:** JetBrains Mono
