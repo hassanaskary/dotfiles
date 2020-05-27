@@ -1,3 +1,7 @@
+![Screenshot](screen.png)
+
 # dotfiles
 
-![Screenshot](screen.png)
+Terminal: Alacritty
+Editor: Neovim
+Font: JetBrains Mono
