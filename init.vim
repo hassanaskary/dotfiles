@@ -10,6 +10,7 @@ set termguicolors " enable true colors
 syntax on
 set number " show line numbers
 set relativenumber " enable relative line numbering
+set nowrap
 
 " use 4 spaces instead of tabs
 set expandtab
