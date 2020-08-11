@@ -46,7 +46,5 @@ background_opacity: 0.95
 selection:
   save_to_clipboard: true
 
-dynamic_title: true
-
 cursor:
   unfocused_hollow: true
