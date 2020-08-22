@@ -33,7 +33,10 @@ set cursorline " highlight cursor position
 set mouse=a " enable mouse usage
 set clipboard=unnamedplus " copy and paste to system clipboard
 set splitbelow splitright " always split right and below
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:.
+set list " show whitespace characters
 set noshowmode
+set signcolumn=yes " keep the gutter on the left open to avoid distractions
 set spelllang=en_gb " enable spell check
 autocmd FileType latex,tex,md,markdown setlocal spell " enable spell checking in following file types
 
@@ -46,9 +49,9 @@ set display+=lastline
 
 " If vim plug is not installed then install it
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
+    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
 endif
 
 call plug#begin()
@@ -59,9 +62,11 @@ Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tmhedberg/SimpylFold'
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'junegunn/goyo.vim'
 Plug 'lervag/vimtex'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " colorscheme
@@ -71,6 +76,9 @@ set background=dark
 
 " keybindings
 let mapleader = "\<Space>"
+
+" remap esc to jj
+imap jj <ESC>
 
 " movement by screen line instead of file line for j and k
 nnoremap j gj
@@ -91,22 +99,19 @@ nmap <leader>A <Plug>CtrlSFCwordPath <CR>
 nmap <leader>c :CtrlSFToggle<CR>
 
 " CtrlSF plugin settings
-let g:ctrlsf_auto_preview = 1 
+let g:ctrlsf_auto_preview = 1
 let g:ctrlsf_auto_focus = {
-    \ "at": "start"
-    \ }
-
-" Neoformat plugin settings
-let g:neoformat_basic_format_align = 1 " Enable alignment
-let g:neoformat_basic_format_retab = 1 " Enable tab to spaces conversion
-let g:neoformat_basic_format_trim = 1 " Enable trimmming of trailing whitespace
-
-" lightline plugin settings
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
+            \ "at": "start"
+            \ }
 
 " vimtex plugin settings
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 
+" semshi plugin settings
+let g:semshi#simplify_markup = 'false'
+
+" ale plugin settings
+let g:ale_linters = {'python': ['pylint']}
+let g:ale_fixers = {'python': ['yapf']}
+let g:ale_sign_column_always = 1
