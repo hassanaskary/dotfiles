@@ -58,7 +58,7 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dyng/ctrlsf.vim'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tmhedberg/SimpylFold'
@@ -73,6 +73,7 @@ call plug#end()
 let g:gruvbox_italics=1
 colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark='hard'
 
 " keybindings
 let mapleader = "\<Space>"
@@ -113,5 +114,5 @@ let g:semshi#simplify_markup = 'false'
 
 " ale plugin settings
 let g:ale_linters = {'python': ['pylint']}
-let g:ale_fixers = {'python': ['yapf']}
+let g:ale_fixers = {'python': ['black']}
 let g:ale_sign_column_always = 1
