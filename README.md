@@ -1,11 +1,9 @@
-![Screenshot](screen.png)
-
 # dotfiles
 
-**Terminal:** Alacritty
+**Terminal:** WezTerm with Startship
 
-**Editor:** Neovim
+**Editor:** Neovim with LazyVim
 
 **Font:** JetBrains Mono
 
-**Color Scheme:** Gruvbox
+**Color Scheme:** Tokyonight (Neovim) and Aura (WezTerm)
