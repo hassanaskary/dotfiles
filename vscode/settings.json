@@ -1,0 +1,53 @@
+{
+    "editor.fontFamily": "'Maple Mono NF', 'JetBrainsMono Nerd Font', monospace",
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.lineNumbers": "relative",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 1.5,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 5,
+    "editor.formatOnSave": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.titleBarStyle": "custom",
+    "terminal.integrated.inheritEnv": false,
+    "interactiveWindow.executeWithShiftEnter": true,
+    "telemetry.telemetryLevel": "off",
+    "vscode.env.isTelemetryEnabled": false,
+    "terminal.integrated.allowChords": false,
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.colorTheme": "Monokai",
+    "editor.renderWhitespace": "all",
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.tree.indent": 12,
+    "git.autofetch": true,
+    "extensions.ignoreRecommendations": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.typeEvaluation.strictDictionaryInference": true,
+    "python.analysis.typeEvaluation.strictListInference": true,
+    "python.analysis.typeEvaluation.strictSetInference": true,
+    "cursor.cpp.disabledLanguages": [
+        "plaintext",
+        "markdown",
+        "scminput"
+    ],
+    "crashReporting.enabled": "off",
+}
