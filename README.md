@@ -1,9 +1,9 @@
 # dotfiles
 
-**Terminal:** WezTerm with Startship
+**Terminal:** WezTerm
 
-**Editor:** Neovim with LazyVim
+**Editor:** Neovim
 
-**Font:** JetBrains Mono
+**Font:** Maple Mono
 
-**Color Scheme:** Tokyonight (Neovim) and Aura (WezTerm)
+**Color Scheme:** Monokai (Neovim) and Duskfox (WezTerm, Cursor/VS Code)

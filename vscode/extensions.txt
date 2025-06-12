@@ -22,3 +22,5 @@ pkief.material-icon-theme
 tomoki1207.pdf
 usernamehw.errorlens
 vscodevim.vim
+docker.docker
+keifererikson.nightfox
