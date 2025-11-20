@@ -1,50 +1,111 @@
 {
-    "editor.fontFamily": "'Maple Mono NL NF', 'JetBrainsMono Nerd Font', monospace",
-    "vim.leader": "<space>",
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.handleKeys": {
-        "<C-p>": false
-    },
-    "editor.minimap.enabled": false,
-    "editor.cursorBlinking": "smooth",
-    "editor.lineNumbers": "relative",
-    "editor.fontSize": 16,
-    "editor.lineHeight": 1.5,
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.lineHeight": 1.2,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorSurroundingLines": 5,
+  "workbench.colorTheme": "Monokai",
+  "workbench.tree.indent": 12,
+
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.lineHeight": 1.2,
+
+  "editor.fontFamily": "'Maple Mono', 'JetBrainsMono Nerd Font','Ubuntu Mono', monospace",
+  "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.lineNumbers": "relative",
+  "editor.lineHeight": 1.5,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines": 10,
+  "editor.renderWhitespace": "all",
+  "editor.inlineSuggest.suppressSuggestions": true,
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "window.titleBarStyle": "custom",
-    "terminal.integrated.inheritEnv": false,
-    "interactiveWindow.executeWithShiftEnter": true,
-    "telemetry.telemetryLevel": "off",
-    "vscode.env.isTelemetryEnabled": false,
-    "terminal.integrated.allowChords": false,
-    "workbench.activityBar.orientation": "vertical",
-    "workbench.colorTheme": "Duskfox",
-    "editor.renderWhitespace": "all",
-    "editor.inlineSuggest.suppressSuggestions": true,
-    "cmake.showOptionsMovedNotification": false,
-    "workbench.tree.indent": 12,
-    "git.autofetch": true,
-    "extensions.ignoreRecommendations": true,
-    "cursor.cpp.disabledLanguages": [
-        "plaintext",
-        "markdown",
-        "scminput"
-    ],
-    "crashReporting.enabled": "off",
-    "git.confirmSync": false,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+    }
+  },
+  "isort.args": [
+    "--profile",
+    "black",
+  ],
+  "python.analysis.typeCheckingMode": "standard",
+
+  "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+
+  "security.workspace.trust.untrustedFiles": "open",
+
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  "interactiveWindow.executeWithShiftEnter": true,
+
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github"
+  ],
+
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.advanced": {},
+
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-p>": false
+  },
+
+  // Italics on keywords
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "interface": {
+        "italic": true
+      },
+      "selfParameter": {
+        "italic": true
+      },
+      "keyword": {
+        "italic": true
+      },
+      "*.static": {
+        "italic": true
+      }
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "constant.language.undefined",
+          "constant.language.null",
+          "constant.language.nullptr",
+          "meta.type keyword.operator.expression.typeof",
+          "meta.type keyword.operator.expression.keyof",
+          "keyword.control",
+          "keyword.function",
+          "keyword.operator.new",
+          "keyword.operator.borrow.and.rust",
+          "storage.type",
+          "storage.modifier",
+          "variable.language.this",
+          "markup.italic"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "editor.largeFileOptimizations": true
 }
